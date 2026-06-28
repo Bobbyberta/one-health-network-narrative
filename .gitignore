@@ -12,12 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Proprietary story content — never commit
-story_data.json
-src/data/story_data.json
-story_narrative.md
-story_narrative_2.md
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
