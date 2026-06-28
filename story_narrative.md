@@ -37,7 +37,7 @@ STATUS: Staging server staging.omnic-care.co.uk:9921 accepting external connecti
 ### Feed — on entry
 
 <!-- @1.1.feed_init[0] · SYSTEM · +0m -->
-Reminder to all staff: OmnicCare OS v4.0 rolls out across the Trust at 09:30. Expect brief 30-second disconnects on vitals monitors.
+Reminder to all staff: One Health OS v4.0 rolls out across the Trust at 09:30. Expect brief 30-second disconnects on vitals monitors.
 
 <!-- @1.1.feed_init[1] · ED Triage · +2m -->
 @Nick does this patch fix the discharge letter lag? We've got 4 people waiting for prescriptions just to clear their beds.
@@ -49,7 +49,7 @@ Reminder to all staff: OmnicCare OS v4.0 rolls out across the Trust at 09:30. Ex
 We've got 3 crews arriving in the bay now. Traffic on the A36 is awful, expect a rush.
 
 <!-- @1.1.feed_init[4] · SYSTEM · +8m -->
-OmnicCare OS v4.0 deployment initiated...
+One Health OS v4.0 deployment initiated...
 
 <!-- @1.1.feed_init[5] · SYSTEM · +10m -->
 Update successful. All nodes active on NHS Trust Grid 4.
@@ -73,11 +73,11 @@ AMBULANCE BLIND SPOT: {ambulanceQueue} crews backed up outside. Emergency intake
 
 ---
 
-### Choice A — Inspect OmnicCare public staging server deployment logs
+### Choice A — Inspect One Health public staging server deployment logs
 *(15 min · ambulanceQueue +1)*
 
 <!-- @1.1.options[0].text -->
-Inspect OmnicCare public staging server deployment logs
+Inspect One Health public staging server deployment logs
 
 <!-- @1.1.options[0].player_message -->
 Connecting to staging portal on exposed port 9921... Accessing deployment history for package: omnic-v4.0.
@@ -128,12 +128,12 @@ guest@sw-trust-auditor:~$ bypass_omnic_lockout --target=hospital-sql-01
 [SUCCESS] Accessing core-db.nhs-grid4.internal bypass channel. Admin lock active.
 
 <!-- @1.2.console_init[2] -->
-SYSTEM ALERT: Remote SQL access restricted by OmnicCare vendor policy 'IP-Shield-V4'.
+SYSTEM ALERT: Remote SQL access restricted by One Health vendor policy 'IP-Shield-V4'.
 
 ### Feed — on entry
 
 <!-- @1.2.feed_init[0] · IT Helpdesk · +3m -->
-@Tom looking at the CAD sync issue now. OmnicCare central support says it's a local network glitch on our end. They're telling us to restart our switches.
+@Tom looking at the CAD sync issue now. One Health central support says it's a local network glitch on our end. They're telling us to restart our switches.
 
 <!-- @1.2.feed_init[1] · Ambulance Handover · +7m -->
 Restarting will take the whole bay offline for 10 minutes! We have 7 ambulances parked up now, engines running. Drivers are refusing to leave their vehicles because we can't generate patient wristbands to formally log the handover.
@@ -148,7 +148,7 @@ Dr. Aris, I'm trying. Every time I click 'Assign Bed' to clear a cubicle, the sy
 Well, override it! We have a suspected stroke patient sitting in the back of an ambulance on the ramp who needs an immediate CT scan, but I can't request the scan until they are officially admitted into a bed on the system!
 
 <!-- @1.2.feed_init[5] · IT Helpdesk · +40m -->
-I've raised a Priority 1 ticket with OmnicCare. They've locked our local admin access to the SQL console. They claim they are protecting intellectual property while they investigate an 'unauthorized credential leak.' They won't let me manually clear the database timeouts.
+I've raised a Priority 1 ticket with One Health. They've locked our local admin access to the SQL console. They claim they are protecting intellectual property while they investigate an 'unauthorized credential leak.' They won't let me manually clear the database timeouts.
 
 <!-- @1.2.feed_init[6] · Hospital Director · +53m -->
 Attention all staff. We are declaring a Business Continuity Incident (OPEL 4 / Black Alert). Requesting a total Divert for all incoming non-life-threatening blue lights to Royal United.
@@ -182,7 +182,7 @@ guest@sw-trust-auditor:~$ query_database_locks --table=bed_occupancy
 Lock Type: Exclusive Write Lock (X-Lock) · Status: STALLED / TIMEOUT LOOP
 
 <!-- @1.2.options[0].console_response[2] -->
-[ANALYZING] PID_8812 trying to send 'patient_demographics_v4' to IP: 45.112.8.90 (OmnicCare Analytics Cloud).
+[ANALYZING] PID_8812 trying to send 'patient_demographics_v4' to IP: 45.112.8.90 (One Health Analytics Cloud).
 Transmission FAILING: Connection refused by target server.
 
 <!-- @1.2.options[0].console_response[3] -->
@@ -198,7 +198,7 @@ Manager_J: "Keep quiet about it. If they find out it's our telemetry script caus
 #### Feed after choice
 
 <!-- @1.2.options[0].feed_update[0] · Hospital Director · +70m -->
-OmnicCare helpdesk insisting their software metrics look optimal. This doesn't match reality.
+One Health helpdesk insisting their software metrics look optimal. This doesn't match reality.
 
 <!-- @1.2.options[0].feed_update[1] · SYSTEM · +72m -->
 DATABASE TIMEOUT: Row lock threshold exceeded. Real-time {occupancy}% metric display unstable.
@@ -233,7 +233,7 @@ It's 15 ambulances now. The police are here directing traffic on the main road b
 Claire, we have an elderly patient in Ambulance 6 whose oxygen sats are dropping. I cannot get a clinical allocation because the PAS won't let me clear a discharged patient from Cubicle 3. I am physically moving them out anyway. We are operating completely blind.
 
 <!-- @1.3.feed_init[3] · IT Helpdesk · +30m -->
-OmnicCare has completely cut off my support portal account. They claim we violated our terms of service by trying to run unapproved database queries. They aren't helping us. They've abandoned the site.
+One Health has completely cut off my support portal account. They claim we violated our terms of service by trying to run unapproved database queries. They aren't helping us. They've abandoned the site.
 
 <!-- @1.3.feed_init[4] · Hospital Director · +43m -->
 @Nick, if we manually pull the network plug on the main server rack, will the local machines drop back to a safe offline cache?
@@ -258,7 +258,7 @@ SYSTEM COLLAPSE: {ambulanceQueue} crews locked out. Outbound telemetry error hol
 Inject database patch and exfiltrate internal compliance logs
 
 <!-- @1.3.options[0].player_message -->
-Deploying force_unlock_pas.sql and piping internal OmnicCare developer chat logs to secure news bureau...
+Deploying force_unlock_pas.sql and piping internal One Health developer chat logs to secure news bureau...
 
 #### Console response
 
@@ -319,7 +319,7 @@ Scrubbing volatile memory buffers... OK.
 Overwriting system logs with randomized hex blocks... OK.
 
 <!-- @1.4.console_init[2] -->
-[WARNING] OmnicCare defensive scan reaching local gateway subnet...
+[WARNING] One Health defensive scan reaching local gateway subnet...
 Intercepting incoming ping from 194.22.104.12... Packet dropped.
 
 ### Feed — on entry
@@ -328,16 +328,16 @@ Intercepting incoming ping from 194.22.104.12... Packet dropped.
 All staff: We are stepping down from OPEL 4 / Black Alert back to OPEL 3. The backlog is moving, but our priority is clearing the corridor congestion.
 
 <!-- @1.4.feed_init[1] · IT Helpdesk · +5m -->
-Claire, I'm looking at the core router traffic logs. Someone used an unmapped, hardcoded developer backdoor to push that SQL patch. OmnicCare's corporate security team is actively trying to regain control. They're running a network-wide scan to locate the intrusion vector.
+Claire, I'm looking at the core router traffic logs. Someone used an unmapped, hardcoded developer backdoor to push that SQL patch. One Health's corporate security team is actively trying to regain control. They're running a network-wide scan to locate the intrusion vector.
 
 <!-- @1.4.feed_init[2] · ED Triage · +12m -->
 @Tom, that's the last patient off the ramp safely inside. Triage desk is fully operational again. It's still incredibly busy, but we have eyes on everyone. We aren't blind anymore.
 
 <!-- @1.4.feed_init[3] · IT Helpdesk · +18m -->
-CRITICAL WARNING: OmnicCare's central servers just initiated a remote firmware wipe on our local gateway to terminate the exploit chain. They are trying to destroy the evidence trail on our servers. I need to copy the local audit logs before they're gone!
+CRITICAL WARNING: One Health's central servers just initiated a remote firmware wipe on our local gateway to terminate the exploit chain. They are trying to destroy the evidence trail on our servers. I need to copy the local audit logs before they're gone!
 
 <!-- @1.4.feed_init[4] · Hospital Director · +22m -->
-@Nick, stop. Leave it. BBC News just posted the full, unredacted Slack logs and internal testing warnings on their live text block. The whole country is reading them. It doesn't matter what OmnicCare wipes here—the truth is already out.
+@Nick, stop. Leave it. BBC News just posted the full, unredacted Slack logs and internal testing warnings on their live text block. The whole country is reading them. It doesn't matter what One Health wipes here—the truth is already out.
 
 <!-- @1.4.feed_init[5] · Ambulance Handover · +28m -->
 All crews are officially handed over. No vehicles waiting on the ramp. First time since 9 AM. Exceptional work today, everyone.
@@ -386,7 +386,7 @@ Bypassing network bridge... Dropping terminal tunnel... Signal disconnected.
 #### Feed after choice
 
 <!-- @1.4.options[0].feed_update[0] · BBC NEWS LIVE · +35m -->
-BREAKING: OmnicCare CEO Resigns Amid NHS Software Scandal. Leaked documents expose systemic contract manipulation.
+BREAKING: One Health CEO Resigns Amid NHS Software Scandal. Leaked documents expose systemic contract manipulation.
 
 <!-- @1.4.options[0].feed_update[1] · BBC NEWS LIVE · +40m -->
 On-site IT report an unidentified individual pushed an external hotfix to restore hospital vitals tracking safely.

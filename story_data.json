@@ -28,7 +28,7 @@
         {
           "tick_offset_mins": 0,
           "sender": "SYSTEM",
-          "text": "Reminder to all staff: OmnicCare OS v4.0 rolls out across the Trust at 09:30. Expect brief 30-second disconnects on vitals monitors.",
+          "text": "Reminder to all staff: One Health OS v4.0 rolls out across the Trust at 09:30. Expect brief 30-second disconnects on vitals monitors.",
           "delay_ms": 200
         },
         {
@@ -52,7 +52,7 @@
         {
           "tick_offset_mins": 8,
           "sender": "SYSTEM",
-          "text": "OmnicCare OS v4.0 deployment initiated...",
+          "text": "One Health OS v4.0 deployment initiated...",
           "delay_ms": 300
         },
         {
@@ -99,7 +99,7 @@
       ],
       "options": [
         {
-          "text": "Inspect OmnicCare public staging server deployment logs",
+          "text": "Inspect One Health public staging server deployment logs",
           "player_message": "Connecting to staging portal on exposed port 9921... Accessing deployment history for package: omnic-v4.0.",
           "time_cost_mins": 15,
           "metrics_delta": {
@@ -171,7 +171,7 @@
           "delay_ms": 400
         },
         {
-          "text": "SYSTEM ALERT: Remote SQL access restricted by OmnicCare vendor policy 'IP-Shield-V4'.",
+          "text": "SYSTEM ALERT: Remote SQL access restricted by One Health vendor policy 'IP-Shield-V4'.",
           "delay_ms": 300
         }
       ],
@@ -179,7 +179,7 @@
         {
           "tick_offset_mins": 3,
           "sender": "IT_Helpdesk",
-          "text": "@Tom looking at the CAD sync issue now. OmnicCare central support says it's a local network glitch on our end. They're telling us to restart our switches.",
+          "text": "@Tom looking at the CAD sync issue now. One Health central support says it's a local network glitch on our end. They're telling us to restart our switches.",
           "delay_ms": 900
         },
         {
@@ -209,7 +209,7 @@
         {
           "tick_offset_mins": 40,
           "sender": "IT_Helpdesk",
-          "text": "I've raised a Priority 1 ticket with OmnicCare. They've locked our local admin access to the SQL console. They claim they are protecting intellectual property while they investigate an 'unauthorized credential leak.' They won't let me manually clear the database timeouts.",
+          "text": "I've raised a Priority 1 ticket with One Health. They've locked our local admin access to the SQL console. They claim they are protecting intellectual property while they investigate an 'unauthorized credential leak.' They won't let me manually clear the database timeouts.",
           "delay_ms": 1000
         },
         {
@@ -254,7 +254,7 @@
               "delay_ms": 500
             },
             {
-              "text": "[ANALYZING] PID_8812 trying to send 'patient_demographics_v4' to IP: 45.112.8.90 (OmnicCare Analytics Cloud).\nTransmission FAILING: Connection refused by target server.",
+              "text": "[ANALYZING] PID_8812 trying to send 'patient_demographics_v4' to IP: 45.112.8.90 (One Health Analytics Cloud).\nTransmission FAILING: Connection refused by target server.",
               "delay_ms": 500
             },
             {
@@ -274,7 +274,7 @@
             {
               "tick_offset_mins": 70,
               "sender": "Hospital_Director",
-              "text": "OmnicCare helpdesk insisting their software metrics look optimal. This doesn't match reality.",
+              "text": "One Health helpdesk insisting their software metrics look optimal. This doesn't match reality.",
               "delay_ms": 900
             },
             {
@@ -332,7 +332,7 @@
         {
           "tick_offset_mins": 30,
           "sender": "IT_Helpdesk",
-          "text": "OmnicCare has completely cut off my support portal account. They claim we violated our terms of service by trying to run unapproved database queries. They aren't helping us. They've abandoned the site.",
+          "text": "One Health has completely cut off my support portal account. They claim we violated our terms of service by trying to run unapproved database queries. They aren't helping us. They've abandoned the site.",
           "delay_ms": 900
         },
         {
@@ -368,7 +368,7 @@
       "options": [
         {
           "text": "Inject database patch and exfiltrate internal compliance logs",
-          "player_message": "Deploying force_unlock_pas.sql and piping internal OmnicCare developer chat logs to secure news bureau...",
+          "player_message": "Deploying force_unlock_pas.sql and piping internal One Health developer chat logs to secure news bureau...",
           "time_cost_mins": 15,
           "metrics_delta": {
             "ambulanceQueue": -4
@@ -459,7 +459,7 @@
           "delay_ms": 500
         },
         {
-          "text": "[WARNING] OmnicCare defensive scan reaching local gateway subnet...\nIntercepting incoming ping from 194.22.104.12... Packet dropped.",
+          "text": "[WARNING] One Health defensive scan reaching local gateway subnet...\nIntercepting incoming ping from 194.22.104.12... Packet dropped.",
           "delay_ms": 400
         }
       ],
@@ -473,7 +473,7 @@
         {
           "tick_offset_mins": 5,
           "sender": "IT_Helpdesk",
-          "text": "Claire, I'm looking at the core router traffic logs. Someone used an unmapped, hardcoded developer backdoor to push that SQL patch. OmnicCare's corporate security team is actively trying to regain control. They're running a network-wide scan to locate the intrusion vector.",
+          "text": "Claire, I'm looking at the core router traffic logs. Someone used an unmapped, hardcoded developer backdoor to push that SQL patch. One Health's corporate security team is actively trying to regain control. They're running a network-wide scan to locate the intrusion vector.",
           "delay_ms": 1000
         },
         {
@@ -485,13 +485,13 @@
         {
           "tick_offset_mins": 18,
           "sender": "IT_Helpdesk",
-          "text": "CRITICAL WARNING: OmnicCare's central servers just initiated a remote firmware wipe on our local gateway to terminate the exploit chain. They are trying to destroy the evidence trail on our servers. I need to copy the local audit logs before they're gone!",
+          "text": "CRITICAL WARNING: One Health's central servers just initiated a remote firmware wipe on our local gateway to terminate the exploit chain. They are trying to destroy the evidence trail on our servers. I need to copy the local audit logs before they're gone!",
           "delay_ms": 1000
         },
         {
           "tick_offset_mins": 22,
           "sender": "Hospital_Director",
-          "text": "@Nick, stop. Leave it. BBC News just posted the full, unredacted Slack logs and internal testing warnings on their live text block. The whole country is reading them. It doesn't matter what OmnicCare wipes here—the truth is already out.",
+          "text": "@Nick, stop. Leave it. BBC News just posted the full, unredacted Slack logs and internal testing warnings on their live text block. The whole country is reading them. It doesn't matter what One Health wipes here—the truth is already out.",
           "delay_ms": 1000
         },
         {
@@ -556,7 +556,7 @@
             {
               "tick_offset_mins": 35,
               "sender": "BBC_NEWS_LIVE",
-              "text": "BREAKING: OmnicCare CEO Resigns Amid NHS Software Scandal. Leaked documents expose systemic contract manipulation.",
+              "text": "BREAKING: One Health CEO Resigns Amid NHS Software Scandal. Leaked documents expose systemic contract manipulation.",
               "delay_ms": 900
             },
             {

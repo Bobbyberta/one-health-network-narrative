@@ -83,7 +83,7 @@ export function SystemReset() {
           <p className="text-slate-400">Status: Ghost</p>
         </div>
         <p className="mb-6 text-xs text-slate-500 md:text-sm">
-          OmnicCare contract telemetry overridden. Hospital vitals tracking
+          One Health contract telemetry overridden. Hospital vitals tracking
           restored under public scrutiny. No local trace remains on this
           terminal.
         </p>
