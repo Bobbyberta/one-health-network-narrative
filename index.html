@@ -14,9 +14,113 @@
       rel="stylesheet"
     />
     <title>THE OPEN HEALTH PROJECT</title>
+    <style>
+      #boot-screen {
+        box-sizing: border-box;
+        min-height: 100dvh;
+        margin: 0;
+        padding: 2rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #020617;
+        color: #e2e8f0;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+      }
+      #boot-screen .panel {
+        width: 100%;
+        max-width: 32rem;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        background: #0f172a;
+        padding: 1.5rem;
+      }
+      #boot-screen h1 {
+        margin: 0 0 1rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #34d399;
+      }
+      #boot-screen p {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.6;
+        color: #94a3b8;
+      }
+      #boot-screen .status {
+        margin-top: 1rem;
+        font-size: 0.8125rem;
+        color: #64748b;
+      }
+      #boot-screen .status::before {
+        content: '> ';
+        color: #34d399;
+      }
+      #boot-screen.error .status {
+        color: #fca5a5;
+      }
+      #boot-screen.error h1 {
+        color: #f87171;
+      }
+      @keyframes boot-blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.35;
+        }
+      }
+      #boot-screen.loading .status {
+        animation: boot-blink 1.2s step-end infinite;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="boot-screen" class="loading" aria-live="polite" aria-busy="true">
+        <div class="panel">
+          <h1>The Open Health Project</h1>
+          <p>Secure terminal session initialising. Stand by.</p>
+          <p class="status">Loading system interface...</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      ;(function () {
+        var boot = document.getElementById('boot-screen')
+        var failed = false
+
+        function showBootError(message) {
+          if (!boot || failed) return
+          failed = true
+          boot.className = 'error'
+          boot.setAttribute('aria-busy', 'false')
+          boot.querySelector('.status').textContent = message
+        }
+
+        window.addEventListener(
+          'error',
+          function (event) {
+            if (event.target && event.target.tagName === 'SCRIPT') {
+              showBootError(
+                'Failed to load application bundle. Try a hard refresh, or check that the site was deployed with the production build.'
+              )
+            }
+          },
+          true
+        )
+
+        window.setTimeout(function () {
+          if (boot && boot.parentElement === document.getElementById('root')) {
+            showBootError(
+              'The interface is taking longer than expected. Check your connection and reload the page.'
+            )
+          }
+        }, 20000)
+      })()
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
