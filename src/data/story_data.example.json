@@ -1,0 +1,66 @@
+{
+  "title": "THE OPEN HEALTH PROJECT",
+  "chapters": [
+    {
+      "id": "example",
+      "identity": "guest@example.nhs",
+      "channel": "#local-announcements",
+      "start_time": "09:00",
+      "metrics": {
+        "bedUtilization": 85,
+        "ambulanceQueue": 2
+      },
+      "console_init": [
+        {
+          "text": "guest@example:~$ echo 'Replace src/data/story_data.json with your story file'",
+          "delay_ms": 100
+        }
+      ],
+      "feed_init": [
+        {
+          "tick_offset_mins": 0,
+          "sender": "SYSTEM_BOT",
+          "text": "Example feed message — copy story_data.example.json to story_data.json for local development.",
+          "delay_ms": 200
+        }
+      ],
+      "options": [
+        {
+          "text": "Continue",
+          "time_cost_mins": 1,
+          "console_response": [
+            {
+              "text": "OK",
+              "delay_ms": 100
+            }
+          ],
+          "feed_update": [
+            {
+              "tick_offset_mins": 1,
+              "sender": "SYSTEM_BOT",
+              "text": "End of example chapter.",
+              "delay_ms": 200
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "epilogue": {
+    "feed": [
+      {
+        "tick_offset_mins": 0,
+        "sender": "SYSTEM_BOT",
+        "text": "Session complete.",
+        "delay_ms": 200
+      }
+    ],
+    "logout_command": "logout",
+    "logout_output": [
+      {
+        "text": "Connection closed.",
+        "delay_ms": 100
+      }
+    ]
+  }
+}
