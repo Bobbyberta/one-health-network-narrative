@@ -33,6 +33,12 @@ jobs:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
         run: npm run build
 
+      - name: Verify production bundle
+        run: |
+          test -f dist/index.html
+          grep -q '/assets/' dist/index.html
+          grep -qv '/src/main.tsx' dist/index.html
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
